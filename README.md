@@ -166,12 +166,6 @@ For **description, topics, and first push**, see [docs/github-setup.md](docs/git
 
 ---
 
-## Resume and portfolio
-
-Copy-ready bullets and interview lines: [docs/resume-and-portfolio.md](docs/resume-and-portfolio.md).
-
----
-
 ## More documentation
 
 - [docs/deployment.md](docs/deployment.md) — Docker mounts and verification  
@@ -179,8 +173,3 @@ Copy-ready bullets and interview lines: [docs/resume-and-portfolio.md](docs/resu
 - [docs/monitoring.md](docs/monitoring.md) — logging and Prometheus metrics  
 - [docs/cloud-aws-free-tier.md](docs/cloud-aws-free-tier.md) — optional EC2 demo (not required)
 
----
-
-## License / attribution
-
-Add a `LICENSE` file if you open-source the repo. Dataset and tooling credits belong in your thesis/README if you use this academically.
