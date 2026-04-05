@@ -1,0 +1,32 @@
+# Git and IDE
+.git
+.gitignore
+.github
+.idea
+.vscode
+
+# Python
+.venv
+__pycache__
+*.py[cod]
+*$py.class
+*.egg-info
+.pytest_cache
+.ruff_cache
+.mypy_cache
+htmlcov
+
+# Local data and experiment outputs (mount at runtime if needed)
+mlruns
+data/raw
+data/interim
+data/processed
+artifacts
+
+# Tests and docs (not needed in runtime image)
+tests
+docs
+
+# Dev tooling
+.pre-commit-config.yaml
+Makefile

@@ -1,0 +1,51 @@
+model:
+  baseline_name: logistic_regression
+  multimodal_name: fusion_random_forest
+  random_state: 42
+  baseline:
+    max_iter: 1000
+    solver: liblinear
+    class_weight: balanced
+    threshold: 0.5
+    train_features_path: data/processed/bbbp_train_features.csv
+    val_features_path: data/processed/bbbp_val_features.csv
+    test_features_path: data/processed/bbbp_test_features.csv
+    model_artifact_path: artifacts/models/baseline_logreg.joblib
+    train_summary_path: artifacts/reports/baseline_train_summary.json
+    eval_report_path: artifacts/reports/baseline_metrics.json
+    run_log_path: artifacts/reports/baseline_runs.csv
+  multimodal:
+    n_estimators: 400
+    max_depth: 20
+    min_samples_split: 2
+    min_samples_leaf: 1
+    threshold: 0.5
+    train_features_path: data/processed/bbbp_train_features.csv
+    val_features_path: data/processed/bbbp_val_features.csv
+    test_features_path: data/processed/bbbp_test_features.csv
+    model_artifact_path: artifacts/models/multimodal_fusion_rf.joblib
+    train_summary_path: artifacts/reports/multimodal_train_summary.json
+    eval_report_path: artifacts/reports/multimodal_metrics.json
+    run_log_path: artifacts/reports/multimodal_runs.csv
+    comparison_report_path: artifacts/reports/baseline_vs_multimodal.json
+  # Graph-enhanced multimodal fusion (GCN + tabular MLP) — advanced upgrade before Phase 13.
+  graph_fusion:
+    max_atoms: 64
+    gcn_hidden: 64
+    gcn_layers: 3
+    tab_hidden: 128
+    fusion_dim: 64
+    dropout: 0.15
+    learning_rate: 0.001
+    batch_size: 32
+    epochs: 80
+    early_stopping_patience: 12
+    threshold: 0.5
+    train_features_path: data/processed/bbbp_train_features.csv
+    val_features_path: data/processed/bbbp_val_features.csv
+    test_features_path: data/processed/bbbp_test_features.csv
+    model_artifact_path: artifacts/models/graph_fusion_nn.joblib
+    train_summary_path: artifacts/reports/graph_fusion_train_summary.json
+    eval_report_path: artifacts/reports/graph_fusion_metrics.json
+    run_log_path: artifacts/reports/graph_fusion_runs.csv
+    three_way_comparison_report_path: artifacts/reports/three_way_model_comparison.json

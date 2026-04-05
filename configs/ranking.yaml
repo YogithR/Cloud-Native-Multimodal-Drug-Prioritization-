@@ -1,0 +1,19 @@
+# Phase 6: candidate prioritization (same splits/features as modeling; no API here).
+ranking:
+  # Which trained model to load for scoring (baseline | multimodal | graph_fusion).
+  model_key: graph_fusion
+  # BBBP: label 1 = permeable (often treated as favorable for CNS exposure).
+  # When true, priority favors high P(y=1). When false, priority favors low P(y=1) (risk framing).
+  positive_class_is_good: true
+  # Descriptor-inspired soft penalties (points subtracted from base priority).
+  penalties:
+    high_logp_threshold: 5.0
+    high_logp_penalty: 5.0
+    high_mw_threshold: 500.0
+    high_mw_penalty: 5.0
+    high_tpsa_threshold: 140.0
+    high_tpsa_penalty: 3.0
+  # Output paths (under artifacts/reports).
+  default_features_path: data/processed/bbbp_test_features.csv
+  ranked_output_path: artifacts/reports/ranked_candidates.csv
+  ranking_summary_path: artifacts/reports/ranking_summary.json

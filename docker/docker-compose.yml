@@ -1,0 +1,21 @@
+# Phase 8: run API with configs + trained artifacts mounted from the host.
+# Prerequisite: train models locally so artifacts/models/*.joblib exist (Phase 4–5).
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    env_file:
+      - ../.env.example
+    volumes:
+      - ../configs:/app/configs:ro
+      - ../artifacts:/app/artifacts:ro
+      - ../mlruns:/app/mlruns
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s

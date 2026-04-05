@@ -1,0 +1,6 @@
+# Phase 9: local MLflow (free, file-backed). UI: mlflow ui --backend-store-uri file:./mlruns
+mlflow:
+  enabled: true
+  tracking_uri: file:./mlruns
+  experiment_name: drug-prioritization-bbbp
+  # Set MLFLOW_DISABLE=1 to skip logging (e.g. in some CI or tests).

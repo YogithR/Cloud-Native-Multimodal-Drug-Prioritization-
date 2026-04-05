@@ -1,0 +1,6 @@
+serving:
+  app_name: DrugPrioritizationAPI
+  version: 0.1.0
+  health_path: /health
+  metrics_path: /metrics
+  log_level: INFO

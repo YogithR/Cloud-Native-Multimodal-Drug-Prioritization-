@@ -1,0 +1,18 @@
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  dataset_source: deepchem_bbbp
+  dataset_url: https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/BBBP.csv
+  dataset_name: BBBP
+  smiles_column: smiles
+  label_column: p_np
+  candidate_id_column: num
+  split:
+    train_size: 0.7
+    val_size: 0.1
+    test_size: 0.2
+  features:
+    fingerprint_radius: 2
+    fingerprint_bits: 128
+  seed: 42
