@@ -223,5 +223,3 @@ The **long-term direction** is to evolve this foundation toward a **more realist
 - Enforce **secure handling** of **sensitive and proprietary** structures and assay data.
 - Adopt **enterprise-grade** deployment patterns (network isolation, secrets management, change control) where required.
 
-**Summary:** This project is a **credible portfolio and engineering baseline**. The roadmap above describes how it could grow toward something **biotech teams would recognize as production-oriented**—honestly scoped, incrementally achievable, and aligned with real R&D constraints.
-
