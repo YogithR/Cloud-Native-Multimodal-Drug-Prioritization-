@@ -173,3 +173,55 @@ For **description, topics, and first push**, see [docs/github-setup.md](docs/git
 - [docs/monitoring.md](docs/monitoring.md) — logging and Prometheus metrics  
 - [docs/cloud-aws-free-tier.md](docs/cloud-aws-free-tier.md) — optional EC2 demo (not required)
 
+---
+
+## Future Goal: Toward a Real Biotech Production System
+
+The repository today is a **strong, end-to-end, local-first platform** for **drug candidate prioritization**: reproducible data and features, **multiple comparable models** (including graph-enhanced multimodal fusion), **honest evaluation**, **deterministic ranking**, and a **container-ready API**. That scope is intentional—it demonstrates how ML platforms are structured without claiming a regulated or proprietary production deployment.
+
+The **long-term direction** is to evolve this foundation toward a **more realistic biotech production system**. The items below are **planned next-step improvements**, not capabilities shipped in this repo. They reflect how industrial R&D and informatics teams typically mature such systems.
+
+### 1. Real-world biotech data expansion
+
+- Move beyond the current **benchmark-style** dataset to **curated internal or licensed** data where appropriate.
+- Integrate richer **assay**, **ADMET**, **bioactivity**, and **target-related** signals as they become available.
+- Improve **data lineage** and **dataset versioning** so training and evaluation are traceable over time.
+
+### 2. Stronger biological context
+
+- Add **protein / target**–aware features or linked modalities where the use case requires it.
+- Support **richer multimodal inputs** (e.g. additional structured assay readouts, pathway-level context—scoped to real data agreements).
+- Align modeling and ranking more closely with **actual drug-discovery decision points** (not only a single public benchmark task).
+
+### 3. More production-grade modeling
+
+- Extend the **graph-enhanced multimodal** stack (architecture search, pretraining, or domain-specific encoders—subject to data and compute).
+- Support **multi-objective** prediction (several endpoints or constraints) instead of relying on a **single-task** setup alone.
+- Add **calibration** and **stronger uncertainty estimation** where decisions depend on reliable confidence.
+
+### 4. Better ranking and decision support
+
+- Make **ranking** more **biologically meaningful** (e.g. tie-break rules and penalties grounded in program-specific ADME/Tox strategy).
+- Support **multi-factor prioritization** (portfolio constraints, risk–benefit composites).
+- Deepen **explainability** for **scientist-facing** workflows (auditable reasons, sensitivity analysis, cohort-level reporting).
+
+### 5. Validation for real-world use
+
+- Introduce **scaffold splits**, **temporal splits**, and **external validation** when external benchmarks or partner data allow.
+- Strengthen **robustness checks** (subgroups, label noise, domain shift).
+- Report evaluation that better reflects **unseen chemistry** and deployment risk.
+
+### 6. Production MLOps and platform maturity
+
+- Strengthen **data and model lineage** (what was trained on what, when, and by whom).
+- Improve **model registry**, **promotion workflows**, and **reproducible** training pipelines at scale.
+- Harden **deployment**, **monitoring**, **drift detection**, and **auditability** for long-running services.
+
+### 7. Security and enterprise readiness
+
+- Add **authentication** and **authorization** for APIs and batch jobs.
+- Enforce **secure handling** of **sensitive and proprietary** structures and assay data.
+- Adopt **enterprise-grade** deployment patterns (network isolation, secrets management, change control) where required.
+
+**Summary:** This project is a **credible portfolio and engineering baseline**. The roadmap above describes how it could grow toward something **biotech teams would recognize as production-oriented**—honestly scoped, incrementally achievable, and aligned with real R&D constraints.
+
