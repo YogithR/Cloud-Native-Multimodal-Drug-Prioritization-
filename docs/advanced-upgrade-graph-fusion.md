@@ -1,6 +1,6 @@
 # Advanced upgrade: graph-enhanced multimodal fusion
 
-This phase sits **before Phase 13** (final polish). The project title is unchanged: **Cloud-Native Multimodal AI Platform for Drug Candidate Prioritization**.
+
 
 ## What was added
 
